@@ -10,23 +10,34 @@ class ParametersController < ApplicationController
   end
 
   def number_game
-    secret_number = 67
+    secret_number = 19
     number = params[:number].to_i
     if number > secret_number
       @message = "too big"
     elsif number < secret_number
       @message = "too small"
-    else 
+    else number == secret_number
       @message = "you win"
     end
   end
 
+  def number_input
+  end
   def segment
-    
   end
   
   def pick_number
+  end
 
+  def form_display
+  end
+
+  def form_result
+    @message = params[:message]
+    puts @messge
+  end
+  
+  def form_number
   end
 
 end

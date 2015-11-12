@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   get '/', to: 'parameters#index'
-  get '/number_game/:number', to: 'parameters#number_game'
+  post '/number_game', to: 'parameters#number_game'
+  get '/number_input', to: 'parameters#number_input'
   get '/segment/:wildcard', to: 'parameters#segment'
-  get '/pick_number/:wildcard', to: 'parameters#pick_number'  
+  get '/pick_number', to: 'parameters#pick_number'  
+  get '/form_display', to: 'parameters#form_display'
+  post '/form_result', to: 'parameters#form_result'
+  post '/form_number', to: 'parameterss#pick_number'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
